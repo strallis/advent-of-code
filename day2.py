@@ -1,4 +1,4 @@
-from aocd import lines
+from aocd import lines  # type: ignore
 #lines = ['A Y','B X','C Z']
 score1 = 0
 score2 = 0

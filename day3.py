@@ -1,4 +1,4 @@
-from aocd import lines
+from aocd import lines  # type: ignore
 
 def part1():
     sum_priority = 0
