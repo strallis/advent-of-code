@@ -1,4 +1,4 @@
-from aocd import lines
+from aocd import lines  # type: ignore
 
 test_input = """addx 15
 addx -11
