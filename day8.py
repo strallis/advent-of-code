@@ -1,4 +1,4 @@
-from aocd import lines
+from aocd import lines  # type: ignore
 import numpy as np
 
 
