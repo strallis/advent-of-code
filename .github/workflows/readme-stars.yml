@@ -1,7 +1,7 @@
 name: Update README ⭐
 on:
   schedule:
-    - cron: "0 5 31 2 *"  # Never run
+    - cron: "0 */12 * * *"  # Run every 12th hour
   workflow_dispatch:
 
 jobs:
