@@ -7,13 +7,29 @@ on:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      
+      # Fetch and update data for the first year
       - uses: k2bd/advent-readme-stars@v1
         with:
           userId: 1038288
           leaderboardId: 2250663
           sessionCookie: ${{ secrets.AOC_SESSION }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
+          tableMarker: <!--- advent_readme_stars_2023 table --->
+          year: 2023
+          
+      # Fetch and update data for the second year
+      - uses: k2bd/advent-readme-stars@v1
+        with:
+          userId: 1038288
+          leaderboardId: 2250663
+          sessionCookie: ${{ secrets.AOC_SESSION }}
+          tableMarker: <!--- advent_readme_stars_2022 table --->
+          year: 2022
+      
+      - uses: stefanzweifel/git-auto-commit-action@v5 # use v5
         with:
           commit_message: Update README stars
