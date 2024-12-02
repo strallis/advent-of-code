@@ -8,7 +8,7 @@ with open("2024/day1.txt", "r") as input_file:
             list1.append(int(values[0]))
             list2.append(int(values[1]))
 
-# Question 1
+# Part 1
 # Sort lists
 sorted_list1, sorted_list2 = sorted(list1), sorted(list2)
 
@@ -18,7 +18,7 @@ for i in range(len(list1)):
 
 print(ans1)
 
-# Questions 2
+# Part 2
 ans2 = 0
 for v in list1:
     ans2 += v * list2.count(v)
